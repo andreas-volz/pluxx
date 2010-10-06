@@ -12,6 +12,7 @@
 #include <iostream>
 
 using namespace std;
+using namespace pluxx;
 
 int main (int argc, const char** argv)
 {
@@ -25,7 +26,7 @@ int main (int argc, const char** argv)
     cout << "Major Version: " << plugin1->getMajorVersion () << endl;
     cout << "Minor Version: " << plugin1->getMinorVersion () << endl;
 
-    PluginLoader::destroyFactory ((Plugin*)plugin1);
+    PluginLoader::destroyFactory ((Plugin*) plugin1);
   }
   catch (PluginTypeMismatchException typeEx)
   {
@@ -38,9 +39,7 @@ int main (int argc, const char** argv)
     cout << "catched an PluginMajorVersionMismatchException exception..." << endl;
     cout << "Loader Major Version: " << verEx.getLoaderMajorVersion () << endl;
     cout << "Plugin Major Version: " << verEx.getPluginMajorVersion () << endl;
-
   }
   
   return 0;
 }
-

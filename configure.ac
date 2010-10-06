@@ -70,6 +70,8 @@ AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}","")
 
 AC_OUTPUT([
 Makefile
+pluxx.pc
+pluxx-uninstalled.pc
 include/Makefile
 include/pluxx/Makefile
 src/Makefile

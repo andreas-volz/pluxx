@@ -16,6 +16,8 @@
 
 using namespace std;
 
+namespace pluxx {
+
 // the types of the class factories
 typedef Plugin* plugin_create_t ();
 typedef void plugin_destroy_t (Plugin*);
@@ -62,3 +64,5 @@ void PluginLoader::destroyFactory (Plugin *plugin)
   plugin_destroy (plugin);
   if (dlclose (plugin->getHandle ())) throw std::runtime_error ("dlclose() failed"); 
 }
+
+} // end namespace pluxx

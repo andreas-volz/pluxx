@@ -7,6 +7,8 @@
 #include <iomanip>
 #include <iostream>
 
+namespace pluxx {
+
 /// create std::string from any number
 template <typename T>
 std::string toString (const T &thing, int w = 0, int p = 0)
@@ -16,5 +18,6 @@ std::string toString (const T &thing, int w = 0, int p = 0)
   return os.str();
 }
 
-#endif	// STRING_UTIL_H
+} // end namespace pluxx
 
+#endif	// STRING_UTIL_H

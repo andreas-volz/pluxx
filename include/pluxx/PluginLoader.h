@@ -7,6 +7,8 @@
 /* STD */
 #include <string>
 
+namespace pluxx {
+
 /* forward declarations*/
 class Plugin;
 
@@ -27,5 +29,7 @@ private:
   PluginLoader (); // don't allow construction
   virtual ~PluginLoader (); // don't allow destruction
 };
+
+} // end namespace pluxx
 
 #endif // PLUGIN_LOADER_H

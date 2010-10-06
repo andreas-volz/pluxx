@@ -11,6 +11,8 @@
 
 using namespace std;
 
+namespace pluxx {
+
 const char* PluginTypeMismatchException::what () const throw ()
 {
   static string s;
@@ -50,3 +52,5 @@ const unsigned int PluginMajorVersionMismatchException::getPluginMajorVersion ()
 {
   return mPluginMajorVersion;
 }
+
+} // end namespace pluxx
