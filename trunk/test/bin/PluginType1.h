@@ -3,7 +3,7 @@
 
 #include "pluxx/Plugin.h"
 
-class PluginType1 : public Plugin
+class PluginType1 : public pluxx::Plugin
 {
 public:
   virtual void func1 () = 0;

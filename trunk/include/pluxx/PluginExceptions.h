@@ -5,6 +5,7 @@
 #include <string>
 #include <exception>
 
+namespace pluxx {
 
 class PluginTypeMismatchException : public std::exception
 {
@@ -45,5 +46,7 @@ private:
   unsigned int mLoaderMajorVersion;
   unsigned int mPluginMajorVersion;
 };
+
+} // end namespace pluxx
 
 #endif // PLUGIN_EXCEPTIONS_H

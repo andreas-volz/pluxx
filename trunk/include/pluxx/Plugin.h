@@ -3,6 +3,10 @@
 
 #include <string>
 
+#define PLUGIN_EXPORT extern "C"
+
+namespace pluxx {
+
 /* forward declarations */
 class PluginLoader;
 
@@ -33,5 +37,7 @@ private:
 
   void *mHandle;
 };
+
+} // end namespace pluxx
 
 #endif // PLUGIN_H
