@@ -1,6 +1,7 @@
 #ifndef PLUGIN_TYPE1_H
 #define PLUGIN_TYPE1_H
 
+/* pluxx */
 #include "pluxx/Plugin.h"
 
 class PluginType1 : public pluxx::Plugin

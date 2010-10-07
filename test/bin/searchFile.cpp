@@ -12,7 +12,7 @@ using namespace std;
 
 const std::string searchPluginFile (const std::string &plugin)
 {
-  vector <string> name_vector;
+  vector <string> name_vector; // TODO: port to list and iterator usage
   string ext (".so");
 
   // as default search only on the current directory

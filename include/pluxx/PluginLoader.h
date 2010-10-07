@@ -18,12 +18,19 @@ public:
   /*!
    * Use this factory function to create an Plugin instead of calling 'new' on it.
    */
-  static Plugin *loadFactory (const std::string &filename, const std::string& type, unsigned int majorVersion);
+  static Plugin *loadFactory (const std::string &filename, const std::string &type, unsigned int majorVersion);
 
   /*!
    * Use this factory function to delete an Plugin instead of calling 'delete' on it.
    */
   static void destroyFactory (Plugin *plugin);
+
+protected:
+  static void *loadFactoryInternal (const std::string &filename, const std::string &type, unsigned int majorVersion);
+
+  static void *loadSymbol (void *pluginHandle, const std::string &symbol);
+
+  static void registerPlugin (Plugin *plugin, void *pluginHandle);
   
 private:  
   PluginLoader (); // don't allow construction

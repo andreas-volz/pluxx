@@ -3,7 +3,7 @@
 #endif
 
 #include "pluxx/Plugin.h"
-#include "../../bin/PluginType1.h"
+#include "../../bin/PluginType2.h"
 
 /* STD */
 #include "cstring"
@@ -11,15 +11,20 @@
 
 using namespace std;
 
-static const char* type = "PluginType1";
+static const char* type = "PluginType2";
 static const unsigned int major_version = 1;
 static const unsigned int minor_version = 1;
 
-class PluginTest1 : public PluginType1
+class PluginTest2 : public PluginType2
 {
 public:
-  PluginTest1 () {};
-  virtual ~PluginTest1 () {};
+  PluginTest2 (const std::string &param1, const std::string &param2)
+  {
+    cout << "param1: " << param1 << endl;
+    cout << "param2: " << param2 << endl;
+  };
+  
+  virtual ~PluginTest2 () {};
 
   const std::string getType ()
   {
@@ -36,21 +41,21 @@ public:
     return minor_version;
   }
   
-  void func1 ()
+  void func2 ()
   {
-    cout << "I'm a function in PluginTest1" << endl;
+    cout << "I'm a function in PluginTest2" << endl;
   }
 
 private:
 
 };
 
-PLUGIN_EXPORT PluginType1 *plugin_create ()
+PLUGIN_EXPORT PluginType2 *plugin_create (const std::string &param1, const std::string &param2)
 {
-  return new PluginTest1 ();
+  return new PluginTest2 (param1, param2);
 }
 
-PLUGIN_EXPORT void plugin_destroy (PluginType1 *plugin)
+PLUGIN_EXPORT void plugin_destroy (PluginType2 *plugin)
 {
   delete plugin;
 }
