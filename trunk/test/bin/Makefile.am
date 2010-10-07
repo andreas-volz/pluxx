@@ -8,7 +8,10 @@ test_plugin_SOURCES = \
 	searchFile.cpp     \
 	searchFile.h     \
 	Exceptions.cpp     \
-	Exceptions.h
+	Exceptions.h     \
+	CustomPluginLoader.cpp     \
+	CustomPluginLoader.h     \
+	PluginType2.h
 
 test_plugin_LDADD = \
 	$(LIBDL)
