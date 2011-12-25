@@ -18,6 +18,8 @@ ACLOCAL_AMFLAGS = -I m4
 
 EXTRA_DIST = $(pluxxdoc_DATA)
 
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = pluxx.pc
 
 # Remove doc directory on uninstall
 uninstall-local:
