@@ -1,0 +1,1 @@
+A C++ plugin loader library. It's implemented with dlopen() mechanism for loading shared libraries. It provides a class loader interface that hides the complete dlopen() mechanism behind an easy interface.
