@@ -5,3 +5,13 @@ before_install:
   - sudo apt-get install -y cdbs
 
 script: dpkg-buildpackage -us -uc
+
+deploy:
+  provider: releases
+  api_key: "4743b716558cc52a95a11b75c2958fa601b17c06"
+  file: 
+    - "../libpluxx1_0.1-1_amd64.deb"
+    - "../libpluxx-dev_0.1-1_amd64.deb"
+  skip_cleanup: true
+  on:
+    tags: true
