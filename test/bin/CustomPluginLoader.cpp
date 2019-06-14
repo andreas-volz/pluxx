@@ -17,3 +17,4 @@ Plugin *CustomPluginLoader::loadFactory (const std::string &filename, const std:
   
   return plugin;
 }
+

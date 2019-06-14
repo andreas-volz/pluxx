@@ -32,7 +32,6 @@ protected:
 
   static void registerPlugin (Plugin *plugin, void *pluginHandle);
   
-private:  
   PluginLoader (); // don't allow construction
   virtual ~PluginLoader (); // don't allow destruction
 };
