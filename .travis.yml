@@ -8,7 +8,7 @@ script: dpkg-buildpackage -us -uc -rfakeroot
 
 deploy:
   provider: releases
-  api_key: "4743b716558cc52a95a11b75c2958fa601b17c06"
+  api_key: "c6857ece6d4b9bec839c58c27b052df37ad0f7df"
   file_glob: true
   file: 
     - "../libpluxx*.deb"
