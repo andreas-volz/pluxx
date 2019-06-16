@@ -18,4 +18,4 @@ deploy:
     - "../libpluxx*.tar.gz"
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
