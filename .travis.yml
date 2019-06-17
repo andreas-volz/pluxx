@@ -1,8 +1,8 @@
 language: cpp
 
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y cdbs fakeroot
+- sudo apt-get -qq update
+- sudo apt-get install -y cdbs fakeroot
 
 script: dpkg-buildpackage -us -uc -rfakeroot
 
@@ -11,9 +11,11 @@ deploy:
   file_glob: true
   overwrite: true
   draft: true
+  api_key:
+    secure: e52kleDpx6Nu+Nfw4dqdsxLckDvJiMQqgi+Qg/N0K8yIMFylwnlnL0Za984m3eEtd/StdCM11ngfyrSyK0SEPj/IC2I05v27IKPFARqiI0lzIQRflOpz/Gm1HqmMtWvn9/cQPjAwlIefzpdayL2hKYJVebDWDhVsG3JhhSyGF+kJds87PB08zgbY5/fkG6yAaROegDeyelu02l8O37uXv9levDgJm2oH0GjaYtX3QnQQzJQLde2JkFtHfrOLolOSgZ3svUkOhMMQFAMbiMXARKrQl4eN7okLHIrpIHpCJqqbLk7BAOIswUtsuvvKSL8TwdQMY0wyc1Xi8q8wRswYodq/2Y2B88TobBwzhWidfDiF17xojZKIs1370og0ToWZdSksQRoMBeQZ8bvd2ZcMr2hMyaLpTliYh9FADOrsYyN44HkmizUsZxkmvZTjS64/F0ICUE2l83OBqbZFi3327XoAPeYch60m8E8Ks5Ob9LnjhBjmfsnbGuLhgr+RbYLmlKifW1jMBo5DDEs2w5W/Piwk3nMImVvtWeOKa/G+vjNB9UZTBsQMEajvSyIRK0engReAylWzQRxsU9+hXUfn5aA4UZ4+lRt+kwvoqChmzfDQniIP9Rtl4EjZotdwhtqwj3Sw9/ZzVDQA77oYA26NSOlcc4a19rt/egV6bbtBn60=
   file: 
     - "../libpluxx*.deb"
     - "../libpluxx*.tar.gz"
   skip_cleanup: true
   on:
-    tags: false
+    repo: andreas-volz/pluxx
