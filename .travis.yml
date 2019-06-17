@@ -8,8 +8,6 @@ script: dpkg-buildpackage -us -uc -rfakeroot
 
 deploy:
   provider: releases
-  api_key: 
-    secure: "4c35e8dd886da61345f6c47dc2054a53291a0615"
   file_glob: true
   overwrite: true
   draft: true
