@@ -4,10 +4,6 @@
 
 AM_CPPFLAGS = 
 
-AM_CFLAGS =\
-	 -Wall\
-	 -g
-
 lib_LTLIBRARIES = \
 	libpluxx.la
 
