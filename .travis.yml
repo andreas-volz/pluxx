@@ -3,6 +3,7 @@ language: cpp
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y cdbs fakeroot libtool xsltproc
+- libtool --version
 
 script: dpkg-buildpackage -us -uc -rfakeroot
 
